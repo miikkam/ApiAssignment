@@ -60,6 +60,7 @@ namespace FeedbackApi.Controllers
             }
 
             feedbackItem.Name = feedbackDTO.Name;
+            feedbackItem.Message = feedbackDTO.Message;
 
             try
             {
