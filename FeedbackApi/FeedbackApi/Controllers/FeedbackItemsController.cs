@@ -9,7 +9,7 @@ using FeedbackApi.Models;
 
 namespace FeedbackApi.Controllers
 {
-    [Route("api/FeedbackItems")]
+    [Route("/")]
     [ApiController]
     public class FeedbackItemsController : ControllerBase
     {
@@ -60,7 +60,6 @@ namespace FeedbackApi.Controllers
             }
 
             feedbackItem.Name = feedbackDTO.Name;
-            feedbackItem.IsComplete = feedbackDTO.IsComplete;
 
             try
             {
@@ -81,8 +80,8 @@ namespace FeedbackApi.Controllers
         {
             var feedbackItem = new FeedbackItem
             {
-                IsComplete = feedbackDTO.IsComplete,
-                Name = feedbackDTO.Name
+                Name = feedbackDTO.Name,
+                Message = feedbackDTO.Message
             };
 
             _context.FeedbackItems.Add(feedbackItem);
@@ -120,7 +119,7 @@ namespace FeedbackApi.Controllers
             {
                 Id = feedbackItem.Id,
                 Name = feedbackItem.Name,
-                IsComplete = feedbackItem.IsComplete
+                Message = feedbackItem.Message
             };
     }
 }
