@@ -1,4 +1,5 @@
-Super simple .NET Core API for leaving feedback. 
+Super simple ASP.NET Core API for leaving feedback. Uses Entity Framework Core and Swagger.
+
 Azure link: https://feedbackapi20230110144522.azurewebsites.net/
 
 Logging with Azure Application Insights: 
